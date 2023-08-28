@@ -1,0 +1,121 @@
+body {
+  text-align: center;
+}
+
+
+/* Header */
+
+.header {
+  /* position */  
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 40dvh;
+  margin: auto;
+}
+
+.title {
+  color: var(--elRojazo);
+  font-size: 4rem;
+  font-weight: var(--extraBold);
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+
+/* Main */
+
+.main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/*  esto es un extra, no aparece en el
+ ejercicio original, me apetecía darle
+ algo de "chispa" al asunto B-)
+ (se ve al hacer scroll hacia abajo) */
+.bigCircle {
+  background-image: url("../images/fire-circle.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 60rem;
+  height: 60rem;
+  /* scroll magic */
+  margin-top: 100vh;
+  margin-bottom: 20vh;
+}
+
+
+/* Footer */
+
+.footer {
+  border-top: 3px solid var(--elRojazo);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 10rem;
+}
+
+.circle {
+  background-color: var(--elRojazo);
+  /* flexbox */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* position */
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 7.4rem;
+  margin: auto;
+  /* appearance */
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+.letter {
+  color: white;
+  font-size: 2rem;
+  font-weight: var(--semiBold);
+}
+
+.letter a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.copyright {
+  font-size: 1.6rem;
+  font-weight: var(--regular);
+  text-transform: uppercase;
+  padding-block: 5rem;
+}
+
+
+/* MEDIA QUERIES */
+
+/* Tablet */
+
+@media (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 2rem;
+  }
+
+  .circle {
+    position: relative;
+    bottom: 0;
+    margin: 0;
+  }
+}
